@@ -13,3 +13,22 @@ This tool does a couple things:
 
 Similar to https://github.com/v2tec/watchtower, with far fewer features and
 uses systemd to restart containers instead of ``docker`` directly.
+
+Ansible
+=======
+
+To configure this as part of an Ansible role:
+
+.. code-block:: yaml
+
+    - git:
+        repo: https://github.com/ktdreyer/watch-systemd-containers
+        dest: /srv/watch-systemd-containers
+
+    - cron:
+        name: watch systemd containers
+        minute: 0
+        hour: 12
+        user: root
+        job: "PYTHONPATH=/srv/watch-systemd-containers /srv/watch-systemd-containers/bin/watch-systemd-containers"
+        cron_file: ansible_watch-containers
