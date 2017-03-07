@@ -15,7 +15,7 @@ Similar to https://github.com/v2tec/watchtower, with far fewer features and
 uses systemd to restart containers instead of ``docker`` directly.
 
 Ansible
-=======
+-------
 
 To configure this as part of an Ansible role:
 
