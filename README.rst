@@ -1,3 +1,9 @@
+project deprecated: see podman-auto-update instead
+==================================================
+It's been several years since I wrote this, and there are many better options
+now. For example, see
+https://docs.podman.io/en/latest/markdown/podman-auto-update.1.html
+
 watch systemd containers
 ========================
 
